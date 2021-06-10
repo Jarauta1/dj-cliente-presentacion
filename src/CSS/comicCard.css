@@ -1,0 +1,516 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.comicCard{
+width: 100vw;
+    height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/KingLee/awesome/master/marvel-bg.jpg");
+  
+  background-size:cover;
+  
+  background-repeat:no-repeat;
+  font-family:"Open Sans",sans-serif;
+}
+
+.card-container{
+  width:700px;
+  height:400px;
+  background:#171717;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  margin-top:-200px;
+  margin-left:-300px;
+  box-shadow: 0px 0px 80px #000;
+}
+.left-image{
+  width:260px;
+  height:400px;
+  float:left;
+  display:inline-block;
+  /* background-image: url('https://raw.githubusercontent.com/KingLee/awesome/master/003gif-test.gif'); */
+  background-size:cover;
+}
+.container-right{
+  width:410px;
+  float:left;
+  display:inline-block;
+  padding-left:30px;
+}
+.top-section{
+  clear:both;
+}
+.title-content{
+  width:380px;
+  float:left;
+  display:inline-block;
+  font-size:12px;
+}
+.detalles-comic{
+  color:#4E4E4E;
+  margin-top:7px;
+}
+
+.Category-comic{
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.title-content img {
+  margin-left:10px;
+}
+.rating{
+  border:1px solid #4e4e4e;
+  padding:1px 8px;
+  border-radius: 3px;
+  margin-right:10px;
+  font-size:10px;
+  font-weight:900; 
+}
+.studio{
+  margin-left:10px;
+  margin-right:10px;
+}
+h2 {
+  color:white;
+  font-size:26px;
+  font-family:sans-serif;
+  font-weight:900;
+  line-height:1.25;
+  padding-top:10px;
+  letter-spacing:.4px;
+}
+
+.score {
+  color:white;
+  margin-left:2px;
+}
+.top-right p{
+  padding-top:12px;
+  padding-right:30px;
+}
+.description {
+  color:#a2a2a2;
+  clear:both;
+  padding-right:30px;
+  line-height:1.5;
+  font-size:14px;
+  padding-top:0px;
+}
+.favorite{
+  color:#145ce0;
+  font-size:14px;
+  margin-top:70px;
+}
+.favorite:hover{
+  color:#146fe0;
+  cursor:pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.favorite:hover #star-icon{
+  fill:#ffd555;
+}
+.wishlist{
+  color:#145ce0;
+  font-size:14px;
+}
+.wishlist:hover{
+  color:#146fe0;
+  cursor:pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.wishlist:hover g{
+  fill:#fff;
+}
+.price {
+  float:left;
+  display:inline;
+  padding-left:37px;
+}
+.arrow {
+  float:left;
+  display:inline;
+  padding-top:15px;
+  padding-left:15px;
+}
+.star-icon {
+  float:left;
+  display:inline;
+  padding-right:10px;
+}
+.list-icon {
+  float:left;
+  display:inline;
+  padding-left:3px;
+  padding-right:12px;
+}
+.boton-cesta-comic {
+	width:700px;
+	outline: none;
+}
+.cart-button-comic {
+	position: relative;
+	padding: 10px;
+	width: 700px;
+	height: 60px;
+	border: none;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #4834d4;
+	outline: none;
+	cursor: pointer;
+	color: #4834d4;
+	transition: .3s ease-in-out;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.cart-button-comic:hover {
+	background-color: #35269b;
+}
+.cart-button-comic:active {
+	transform: scale(.9);
+	outline: none;
+}
+
+.cart-button-comic .fa-shopping-cart {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: -10%;
+	font-size: 2em;
+	transform: translate(-50%,-50%);
+	outline: none;
+}
+.cart-button-comic .fa-box {
+	position: absolute;
+	z-index: 3;
+	top: -20%;
+	left: 52%;
+	font-size: 1.2em;
+	transform: translate(-50%,-50%);
+	outline: none;
+}
+.cart-button-comic span {
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	font-size: 1.2em;
+	color: #fff;
+	transform: translate(-50%,-50%);
+	outline: none;
+}
+.cart-button-comic span.add-to-cart {
+	opacity: 1;
+}
+.cart-button-comic span.added {
+	opacity: 0;
+}
+
+.cart-button-comic.clicked .fa-shopping-cart {
+	animation: cart 1.5s ease-in-out forwards;
+	outline: none;
+}
+.cart-button-comic.clicked .fa-box {
+	animation: box 1.5s ease-in-out forwards;
+	outline: none;
+}
+.cart-button-comic.clicked span.add-to-cart {
+	animation: txt1 1.5s ease-in-out forwards;
+	outline: none;
+}
+.cart-button-comic.clicked span.added {
+	animation: txt2 1.5s ease-in-out forwards;
+	outline: none;
+}
+@keyframes cart {
+	0% {
+		left: -10%;
+	}
+	40%, 60% {
+		left: 50%;
+	}
+	100% {
+		left: 110%;
+	}
+}
+@keyframes box {
+	0%, 40% {
+		top: -20%;
+	}
+	60% {
+		top: 40%;
+		left: 52%;
+	}
+	100% {
+		top: 40%;
+		left: 112%;
+	}
+}
+@keyframes txt1 {
+	0% {
+		opacity: 1;
+	}
+	20%, 100% {
+		opacity: 0;
+	}
+}
+@keyframes txt2 {
+	0%, 80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.outline {
+  width:173px;
+  border: 1px solid #145ce0;
+  background:none;
+  
+}
+.outline:hover{
+  background:#1f293a;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor:pointer;
+  border:1px solid #146fe0;
+}
+.button p{
+  padding-top:4px;
+}
+
+/* ------------ */
+/* BOTON VOLVER */
+/* -------------*/
+
+.close-button {
+	width: 50px;
+	height: 50px;
+	box-shadow: 0px 10 10px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	background: #16161600;
+	border: none;
+	left: 0%;
+	top: 0%;
+	margin-top: 5px;
+	margin-left: 5px;
+	position: relative;
+	display: block;
+	z-index: 200;
+	text-indent: -9999px;
+  }
+  .close-button:before,
+  .close-button:after {
+	content: '';
+	width: 55%;
+	height: 2px;
+	background: #ffffff;
+	position: absolute;
+	top: 48%;
+	left: 22%;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+  }
+  .close-button:after {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+  }
+  .close-button:hover:before {
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	top: 29%;
+	left: 18%;
+  }
+  .close-button:hover:after {
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+	top: 67%;
+	left: 18%;
+  }
+  
+
+/* ---------------- */
+/* FIN BOTON VOLVER */
+/* -----------------*/
+
+/* --------------------- */
+/* PRINCIPIO BOTON HEART */
+/* --------------------- */
+
+.like-comic [type="checkbox"]{
+	display: none;
+  }
+  .like-comic{
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	/* align-items: center; */
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	transition: .3s;
+  }
+  .like-comic:hover{
+	background: white;
+	}
+  
+  .heart{
+	color: linear-gradient(to top, #151a23 0%, #4b5e80 100%);
+	text-align: center;
+	user-select:none;
+	position: relative;
+	top:4px;
+  }
+  .ripple{
+	position:absolute;
+	width: 24px;
+	height: 24px;
+	background-color: red;
+	border-radius:50% ;
+	transform: scale(0);
+  }
+  
+  .like-comic [type="checkbox"]:checked ~ .heart{
+	animation-name: heart;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+  }
+  .like-comic [type="checkbox"]:checked ~ .ripple {
+	animation-name: ripple;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+  }
+  
+  @keyframes heart {
+  
+	0% {
+	  transform: scale(0);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	  color: red;
+	}
+  }
+  @keyframes ripple {
+  
+	0% {
+	  transform: scale(0);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	  opacity:0;
+	}
+  }
+  
+  /* ----------------- */
+  /* FINAL BOTON HEART */
+  /* ----------------- */
+
+  @media only screen and (max-width: 700px) {
+	.comicCard {
+		margin-top: 6.5%;
+	}
+
+	.card-container{
+		display:flex;
+		flex-direction: column;
+		width:300px;
+		height:700px;
+		background:#171717;
+		border-radius: 8px;
+		position: absolute;
+		top: 53%;
+		left:50%;
+		margin-top: -300px;
+		margin-left:-150px;
+		box-shadow: 80px 80px 80px #000;
+	  }
+	  .left-image{
+		width:300px;
+		height:500px;
+		display:inline-block;
+		/* background-image: url('https://raw.githubusercontent.com/KingLee/awesome/master/003gif-test.gif'); */
+		background-size:cover;
+	  }
+	  .container-right{
+		width:300px;
+		float:left;
+		display:inline-block;
+		padding-left:30px;
+	  }
+
+	  .title-content {
+		  width: 270px;
+	  }
+
+	  .title-content h2 {
+		  font-size: 20px;
+	  }
+
+	  .detalles-comic {
+		  font-size: 14px;
+	  }
+
+	  .boton-cesta-comic {
+		width:300px;
+		outline: none;
+	}
+
+	.like-comic{
+		margin-left: 5px;
+	}
+
+	.description {
+		padding-right: 0px;
+	}
+	.cart-button-comic {
+		width: 300px;
+		height: 60px;
+		border: none;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		background-color: #4834d4;
+		outline: none;
+		cursor: pointer;
+		color: #4834d4;
+		transition: .3s ease-in-out;
+		overflow: hidden;
+	}
+	  
+	.add-to-cart {
+		margin-left: 0px;
+	}
+  }

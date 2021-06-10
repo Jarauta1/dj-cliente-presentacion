@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap');
+
+
+
+
+
+
+.fondo-zapatillas{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 700px) {
+    .fondo-zapatillas {
+        margin-top: 3%;
+    }
+}
+
+.fondo-zapatillas .card-zapatilla{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 2%;
+}
+
+@media only screen and (max-width: 700px) {
+    .fondo-zapatillas .card-zapatilla {
+        margin: 20px 10%;
+    }
+}
+
+.fondo-zapatillas .card-zapatilla::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #A3081C;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.fondo-zapatillas .card-zapatilla:hover::before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.fondo-zapatillas .card-zapatilla::after{
+    content: 'Adidas';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 5em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+    text-shadow: 1px 1px 10px #FF0000;
+}
+
+.fondo-zapatillas .card-zapatilla .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.fondo-zapatillas .card-zapatilla .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50px) rotate(-25deg) scaleX(-1);
+    width: 270px;
+}
+
+.fondo-zapatillas .card-zapatilla:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.fondo-zapatillas .card-zapatilla:hover .contentBx{
+    height: 210px;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx h4{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .size,
+.fondo-zapatillas .card-zapatilla .contentBx .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fondo-zapatillas .card-zapatilla:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.fondo-zapatillas .card-zapatilla:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .size h3,
+.fondo-zapatillas .card-zapatilla .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .size span:hover{
+    background: #A3081C;
+    color: #fff;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .color span{
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .color span:nth-child(2){
+    background: #BF0210;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .color span:nth-child(3){
+    background: #03a9f4;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx .color span:nth-child(4){
+    background: #9bdc28;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx button{
+    display: inline-block;
+    padding: 1px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.fondo-zapatillas .card-zapatilla:hover .contentBx button{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+
+.fondo-zapatillas .card-zapatilla .contentBx button:hover{
+    background: #A3081C;
+    color: #fff;
+}
